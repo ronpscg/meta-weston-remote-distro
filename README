@@ -1,0 +1,43 @@
+This README file contains information on the contents of the meta-weston-remote-distro layer.
+
+Please see the corresponding sections below for details.
+
+Dependencies
+============
+  URI: https://github.com/ronpscg/meta-weston-remote
+  branch: master
+
+  No further, dependencies, but you can follow https://github.com/ronpscg/vnc-rdp-pki-creation-for-weston to generate your own PKI materials, instead of the materials packaged in
+  the meta-weston-remote repo.
+  
+Patches
+=======
+
+Please submit any patches against the meta-weston-remote-distro layer to the xxxx mailing list (xxxx@zzzz.org)
+and cc: the maintainer:
+
+Maintainer: Ron Munitz <ron@thepscg.com>
+
+Table of Contents
+=================
+
+  I. Adding the meta-weston-remote-distro layer to your build
+ II. Misc
+
+
+I. Adding the meta-weston-remote-distro layer to your build
+=================================================
+
+Run 'bitbake-layers add-layer meta-weston-remote-distro'
+
+To build, use:
+DISTRO=simple-weston-remote-distro bitbake core-image-weston
+
+You can alternatively start from scratch, and use:
+. oe-init-build-env yourbuilddir
+MACHINE=qcom-armv8a DISTRO=simple-weston-remote-distro bitbake core-image-weston
+
+
+II. Misc
+========
+Video: https://www.youtube.com/watch?v=IGakHmf-aBA&list=PLBaH8x4hthVysdRTOlg2_8hL6CWCnN5l-&index=95
